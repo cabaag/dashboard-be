@@ -1,0 +1,8 @@
+{
+  "name": "dashboard-be",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/cabaag/dashboard-be.git",
+  "author": "cabaag <caba9313@gmail.com>",
+  "license": "MIT"
+}
