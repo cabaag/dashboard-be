@@ -18,15 +18,4 @@ describe('Authentication controller', () => {
 				done();
 			});
 	});
-
-	it('should log out', (done) => {
-		chai
-			.request(server)
-			.post('/api/v1/auth/logout')
-			.send()
-			.end((err, res) => {
-				chai.expect(res).to.have.status(401);
-				done();
-			});
-	});
 });
