@@ -20,3 +20,5 @@ const server = http.createServer(app.app);
 server.listen(process.env.PORT, () => {
 	console.log(`Node server listening on http://localhost:${process.env.PORT}`);
 });
+
+export default server;

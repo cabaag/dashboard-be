@@ -1,6 +1,6 @@
 import { Request, Response, Router } from 'express';
 import IController from 'interfaces/controller.interface';
-import * as users from '../../mocks/users.json';
+import users from '../../mocks/users.json';
 import { authMiddleware } from './../../middlewares/index';
 
 class UserController implements IController {

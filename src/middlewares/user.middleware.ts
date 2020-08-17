@@ -2,8 +2,8 @@ import Payload from '../types/payload';
 import RequestWithUser from '../interfaces/requestWithUser';
 import { NextFunction, Response } from 'express';
 import { verify } from 'jsonwebtoken';
-import userModel from '../app/user/user.model';
 import t from 'typy';
+import * as users from './../mocks/users.json';
 
 async function userMiddleware(
 	request: RequestWithUser,
@@ -17,9 +17,7 @@ async function userMiddleware(
 			const secret = process.env.JWT_SECRET;
 			const verificationResponse = verify(token, secret) as Payload;
 			const id = verificationResponse._id;
-			const user = await userModel
-				.findById(id, '_id name email +googleId +facebookId')
-				.exec();
+			const user = users.find(u => u._id === id);
 			if (user) {
 				request.user = user;
 			} else {

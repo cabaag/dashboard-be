@@ -1,12 +1,11 @@
 import { json, urlencoded } from 'body-parser';
-import * as compression from 'compression';
-import * as cookieParser from 'cookie-parser';
-import * as cors from 'cors';
-import * as express from 'express';
-import * as session from 'express-session';
-import * as helmet from 'helmet';
+import compression from 'compression';
+import cookieParser from 'cookie-parser';
+import cors from 'cors';
+import express from 'express';
+import session from 'express-session';
+import helmet from 'helmet';
 import { join } from 'path';
-import UserService from './src/app/user/user.service';
 import { listRoutes } from './src/utils/listRoutes';
 import passport from './src/config/passport';
 import { corsOptions } from './src/constants/cors';
@@ -56,8 +55,6 @@ class App {
 		this.app.use(loggerMiddleware);
 		this.app.use(passport.initialize());
 
-		passport.serializeUser(UserService.serialize);
-		passport.deserializeUser(UserService.deserialize);
 	}
 
 	private initializeErrorHandling() {

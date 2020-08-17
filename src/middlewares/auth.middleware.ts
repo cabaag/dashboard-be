@@ -1,10 +1,10 @@
 import Payload from '../types/payload';
 import RequestWithUser from '../interfaces/requestWithUser';
 import typy from 'typy';
-import userModel from './../app/user/user.model';
 import { AuthenticationTokenMissingException, WrongAuthenticationTokenException } from '../exceptions/index';
 import { NextFunction, Response } from 'express';
 import { verify } from 'jsonwebtoken';
+import * as users from './../mocks/users.json';
 
 async function authMiddleware(request: RequestWithUser, response: Response, next: NextFunction) {
 	const authorization = typy(request, 'headers.authorization').safeObject as string;
@@ -17,9 +17,9 @@ async function authMiddleware(request: RequestWithUser, response: Response, next
 		try {
 			const verificationResponse = verify(token, secret) as Payload;
 			const id = verificationResponse._id;
-			const user = await userModel.findById(id, '_id name email +googleId +facebookId photoURL phone username').exec();
+			const user = users.find(u => u._id === id);
 			if (user) {
-				request.user = user.toObject();
+				request.user = user;
 				next();
 			} else {
 				next(new WrongAuthenticationTokenException());
