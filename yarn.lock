@@ -381,11 +381,6 @@
     "@types/istanbul-lib-coverage" "*"
     "@types/istanbul-lib-report" "*"
 
-"@types/jasmine@^3.5.12":
-  version "3.5.12"
-  resolved "https://registry.yarnpkg.com/@types/jasmine/-/jasmine-3.5.12.tgz#5c378c1545cdc7cb339cff5578f854b6d1e0a17d"
-  integrity sha512-vJaQ58oceFao+NzpKNqLOWwHPsqA7YEhKv+mOXvYU4/qh+BfVWIxaBtL0Ck5iCS67yOkNwGkDCrzepnzIWF+7g==
-
 "@types/jest@^26.0.10":
   version "26.0.10"
   resolved "https://registry.yarnpkg.com/@types/jest/-/jest-26.0.10.tgz#8faf7e9756c033c39014ae76a7329efea00ea607"
@@ -487,22 +482,6 @@
   dependencies:
     "@types/express" "*"
     "@types/jsonwebtoken" "*"
-    "@types/passport-strategy" "*"
-
-"@types/passport-local-mongoose@^4.0.13":
-  version "4.0.13"
-  resolved "https://registry.yarnpkg.com/@types/passport-local-mongoose/-/passport-local-mongoose-4.0.13.tgz#0edc3aedcc82a70b7e461efc2dc85f42ccb80aa3"
-  integrity sha512-tjVfcyFXO+EIzjTg6DHm+Wq9LwftqDv0kQ/IlLqFHBtZ6gKMy5pLKdr4g62VGEJsgPX8F9UGb9inDREQ2tOpEw==
-  dependencies:
-    "@types/passport-local" "*"
-
-"@types/passport-local@*":
-  version "1.0.33"
-  resolved "https://registry.yarnpkg.com/@types/passport-local/-/passport-local-1.0.33.tgz#d245b60c5b801cb3aeca1ffab557d5fe1534260d"
-  integrity sha512-+rn6ZIxje0jZ2+DAiWFI8vGG7ZFKB0hXx2cUdMmudSWsigSq6ES7Emso46r4HJk0qCgrZVfI8sJiM7HIYf4SbA==
-  dependencies:
-    "@types/express" "*"
-    "@types/passport" "*"
     "@types/passport-strategy" "*"
 
 "@types/passport-oauth2@^1.4.9":
